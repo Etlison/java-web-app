@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <!-- Project Information -->
   <modelVersion>4.0.0</modelVersion>
@@ -8,7 +8,7 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>maven-web-application</name>
-  <description>Maven Web Project for Java Project</description>
+  <description>Maven Web Project for Java Development</description>
 
   <!-- Organization Information -->
   <organization>
@@ -20,9 +20,9 @@
   <properties>
     <jdk.version>1.8</jdk.version>
     <spring.version>5.1.2.RELEASE</spring.version>
-    <junit.version>4.11</junit.version> <!-- Updated dependency version to match properties -->
+    <junit.version>4.13.2</junit.version> <!-- Updated to latest stable version -->
     <log4j.version>1.2.17</log4j.version>
-    <sonar.host.url>http://3.83.86.27:9000/</sonar.host.url> <!-- Corrected URL syntax -->
+    <sonar.host.url>http://3.83.86.27:9000</sonar.host.url> <!-- Ensured proper URL format -->
     <sonar.login>class28</sonar.login>
     <sonar.password>admin</sonar.password>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,7 +38,7 @@
       <version>20160212</version>
     </dependency>
 
-    <!-- Test Dependencies -->
+    <!-- Testing Dependencies -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -48,11 +48,11 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>1.9.5</version>
+      <version>4.11.0</version> <!-- Updated to a more recent version -->
       <scope>test</scope>
     </dependency>
 
-    <!-- Spring Framework Dependencies -->
+    <!-- Spring Framework -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
@@ -74,7 +74,7 @@
       <version>${spring.version}</version>
     </dependency>
 
-    <!-- Servlet API Dependency (Provided Scope) -->
+    <!-- Servlet API -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -105,7 +105,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.10.1</version> <!-- Updated to latest version -->
         <configuration>
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
@@ -116,7 +116,7 @@
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.2.11.v20150529</version>
+        <version>11.0.15</version> <!-- Updated to the latest stable version -->
         <configuration>
           <scanIntervalSeconds>10</scanIntervalSeconds>
           <webApp>
@@ -129,7 +129,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.9</version>
+        <version>2.10</version>
         <configuration>
           <downloadSources>true</downloadSources>
           <downloadJavadocs>true</downloadJavadocs>
